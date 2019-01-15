@@ -18,8 +18,8 @@ namespace Tasks
         [Test]
         public void TestTask7()
         {
-            IList<IWebElement> menu;// = new List<IWebElement>();
-            IList<IWebElement> subMenu;// = new List<IWebElement>();
+            IList<IWebElement> menu;
+            IList<IWebElement> subMenu;
 
             HelperLogin.LogInAdmin(driver);
 
