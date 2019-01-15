@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_7
+namespace Tasks
 {
     public class HelperLogin
     {

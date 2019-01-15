@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{683562B0-4429-49DC-9FED-48EE8826FAB3}</ProjectGuid>
+    <ProjectGuid>{951E184B-D9DD-496A-8E77-75D60422ECCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task_7</RootNamespace>
-    <AssemblyName>Task_7</AssemblyName>
+    <RootNamespace>Task_8</RootNamespace>
+    <AssemblyName>Task_8</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -67,10 +67,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Helpers\Helpers.cs" />
-    <Compile Include="Task_7.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task_8.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

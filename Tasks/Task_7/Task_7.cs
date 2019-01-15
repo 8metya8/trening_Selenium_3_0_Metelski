@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 
-namespace Task_7
+namespace Tasks
 {
 
     [TestFixture]
@@ -18,44 +18,42 @@ namespace Task_7
         [Test]
         public void TestTask7()
         {
-            IList<IWebElement> menu = new List<IWebElement>();
-            IList<IWebElement> subMenu = new List<IWebElement>();
-            IList<IWebElement> elements;
-            string text;
+            IList<IWebElement> menu;// = new List<IWebElement>();
+            IList<IWebElement> subMenu;// = new List<IWebElement>();
 
             HelperLogin.LogInAdmin(driver);
 
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            wait.Until(d => d.FindElement(By.CssSelector("li.selected")));
-            Assert.IsTrue(driver.FindElements(By.CssSelector("td#content>h1")).Count == 1);
-/*
             menu = driver.FindElements(By.CssSelector("ul#box-apps-menu>li"));
 
-            foreach (IWebElement itemOfMenu in menu)
+            for (int a = 0; a < menu.Count; a++)
             {
-                itemOfMenu.Click();
+                menu[a].Click();
                 wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
                 wait.Until(d => d.FindElement(By.CssSelector("li.selected")));
-
+                menu = driver.FindElements(By.CssSelector("ul#box-apps-menu>li"));
                 Assert.IsTrue(driver.FindElements(By.CssSelector("td#content>h1")).Count == 1);
 
-                menu = driver.FindElements(By.CssSelector("ul#box-apps-menu>li"));
-                
-                                subMenu = driver.FindElements(By.CssSelector("li.selected li"));
+
+                subMenu = driver.FindElements(By.CssSelector("li.selected li"));
 
                                 if(subMenu != null)
                                 {
-                                    foreach(IWebElement itemOfSubMenu in subMenu)
-                                    {
-                                        itemOfMenu.Click();
+                                    for (int i = 1; i < subMenu.Count; i++)
+                                     {
+                                        subMenu[i].Click();
 
                                         wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
                                         wait.Until(d => d.FindElement(By.CssSelector("li.selected")));
 
                                         Assert.IsTrue(driver.FindElements(By.CssSelector("td#content>h1")).Count == 1);
-                                    }
+
+                                        subMenu = driver.FindElements(By.CssSelector("li.selected li"));
+                                      }
                                 }
-            }*/
+
+
+                menu = driver.FindElements(By.CssSelector("ul#box-apps-menu>li"));
+            }
             
         }
 
