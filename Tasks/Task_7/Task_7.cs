@@ -31,8 +31,8 @@ namespace Tasks
                 wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
                 wait.Until(d => d.FindElement(By.CssSelector("li.selected")));
                 menu = driver.FindElements(By.CssSelector("ul#box-apps-menu>li"));
-                Assert.IsTrue(driver.FindElements(By.CssSelector("td#content>h1")).Count == 1);
 
+                Assert.IsTrue(driver.FindElements(By.CssSelector("td#content>h1")).Count == 1);
 
                 subMenu = driver.FindElements(By.CssSelector("li.selected li"));
 
@@ -62,9 +62,9 @@ namespace Tasks
         {
             driver = new ChromeDriver();
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(15);
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
 
             driver.Manage().Window.Maximize();
         }
