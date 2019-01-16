@@ -25,6 +25,8 @@ namespace Lesson_5
 
             HelperLogin.LogInAdmin(driver);
             driver.Navigate().GoToUrl("http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones");
+
+            //Get all links to each GeoZone edit page
             allGeoZones = driver.FindElements(By.CssSelector("[name=geo_zones_form] a[title]"));
 
             foreach (IWebElement zone in allGeoZones)
@@ -32,7 +34,7 @@ namespace Lesson_5
                 allCountriesUrls.Add(zone.GetAttribute("href"));
             }
 
-
+            //Check sort for each GeoZones
             foreach (string url in allCountriesUrls)
             {
                 driver.Navigate().GoToUrl(url);
