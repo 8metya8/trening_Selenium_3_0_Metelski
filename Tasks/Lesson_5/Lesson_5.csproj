@@ -68,6 +68,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Task_10.cs" />
+    <Compile Include="Task_10_2.cs" />
     <Compile Include="Task_9_1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task_9_2.cs" />
