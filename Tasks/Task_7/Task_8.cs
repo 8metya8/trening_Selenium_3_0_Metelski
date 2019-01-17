@@ -20,7 +20,7 @@ namespace Tasks
         {
             driver.Navigate().GoToUrl("http://localhost/litecart/");
 
-            IList<IWebElement> allDucks = driver.FindElements(By.CssSelector("ul.listing-wrapper>li"));
+            IList<IWebElement> allDucks = driver.FindElements(By.CssSelector(".product"));
 
             foreach(IWebElement duck in allDucks)
             {
