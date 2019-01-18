@@ -6,7 +6,6 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
 
 namespace Lesson_5
 {
@@ -14,18 +13,13 @@ namespace Lesson_5
      [TestFixture(typeof(ChromeDriver))]
      [TestFixture(typeof(FirefoxDriver))]
      [TestFixture(typeof(EdgeDriver))]
-
+   
     class Task_10<TWebDriver> where TWebDriver : IWebDriver, new()
     {
         private TWebDriver driver;
         private WebDriverWait wait;
 
         [Test]
-
-    //    [TestCase(typeof(ChromeDriver))]
-     //   [TestCase(typeof(FirefoxDriver))]
-     //   [TestCase(typeof(EdgeDriver))]
-
         public void TestTask_10()
         {
             driver.Navigate().GoToUrl("http://localhost/litecart/en/rubber-ducks-c-1/");
@@ -66,7 +60,6 @@ namespace Lesson_5
         public void Stop()
         {
             driver.Quit();
-           // driver = null;
         }
     }
 }

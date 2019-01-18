@@ -19,6 +19,7 @@ namespace Lesson_5
         {
 
             driver.Navigate().GoToUrl("http://localhost/litecart/");
+            IWebElement duck = driver.FindElement(By.CssSelector("#box-campaigns .product"));
 
             
         }
