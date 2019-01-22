@@ -9,6 +9,7 @@ using OpenQA.Selenium.Firefox;
 
 namespace Lesson_5
 {
+    //Сценарий, который проверяет, что при клике на товар открывается правильная страница товара в учебном приложении litecart.
 
      [TestFixture(typeof(ChromeDriver))]
      [TestFixture(typeof(FirefoxDriver))]
@@ -20,7 +21,7 @@ namespace Lesson_5
         private WebDriverWait wait;
 
         [Test]
-        public void TestTask_10()
+        public void TestTask_10_1()
         {
             driver.Navigate().GoToUrl("http://localhost/litecart/en/rubber-ducks-c-1/");
 
