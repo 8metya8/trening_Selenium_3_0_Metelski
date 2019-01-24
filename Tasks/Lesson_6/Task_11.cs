@@ -53,7 +53,7 @@ namespace Lesson_6
             wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[contains(text(), 'Logout')]")));           
             driver.FindElement(By.XPath("//*[contains(text(), 'Logout')]")).Click();
 
-            //Login
+            //wait button Login
             wait.Until(ExpectedConditions.ElementExists((By.Name("login"))));
             //Email
             driver.FindElement(By.Name("email")).SendKeys(email);
