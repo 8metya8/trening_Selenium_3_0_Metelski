@@ -60,7 +60,7 @@ namespace Lesson_6
             driver.FindElement(By.Name("quantity")).SendKeys(new Random().Next(5, 15).ToString());
 
             //File
-            string pathToFile = "icon.jpg";            
+            string pathToFile = "./Lesson_6/icon.jpg";            
             driver.FindElement(By.XPath("//*[@name='new_images[]']")).SendKeys(Path.GetFullPath(pathToFile));
 
             //Date Valid From
